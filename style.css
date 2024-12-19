@@ -18,16 +18,23 @@ header {
 
 .sketchContainer {
   border: 2px solid black;
-  width: 416px;
-  height: 416px;
+   width: 416px;
+  height: 416px; 
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+}
+
+.row {
+  display: flex;
+  flex: 1;
 }
 
 .box {
-  height: 24px;
-  width: 24px;
+  /* height: 24px;
+  width: 24px; */
   border: 1px solid black;
+  flex: 1;
 }
 
 .btnCont {
@@ -38,20 +45,20 @@ header {
   align-items: center;
 }
 
-.btn{
-    height: 50px;
-    width: 130px;
-    border-radius: 8px;
-    background-color: rgb(69, 243, 243);
-    border: none;
+.btn {
+  height: 50px;
+  width: 130px;
+  border-radius: 8px;
+  background-color: rgb(69, 243, 243);
+  border: none;
 }
 
-.btn:hover{
-    background-color: rgb(158, 243, 243);
+.btn:hover {
+  background-color: rgb(158, 243, 243);
 }
 
-.btn:active{
-    background-color: rgb(218, 211, 211);
+.btn:active {
+  background-color: gray;
 }
 
 footer {
