@@ -53,3 +53,10 @@ eraserBtn.addEventListener("click", () => {
     });
   });
 });
+
+let clearBtn = document.querySelector(".clear");
+clearBtn.addEventListener("click", () => {
+  document.querySelectorAll(".box").forEach((e) => {
+    e.style.background = "none";
+  });
+});
