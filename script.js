@@ -9,7 +9,7 @@ function grid() {
     for (let j = 0; j < valueInput; j++) {
       let boxes = document.createElement("div");
       boxes.addEventListener("mouseover", () => {
-        boxes.style.cssText = "background:gray;";
+        boxes.style.cssText = "background:whitesmoke;";
       });
       row.append(boxes);
       boxes.className = "box";
