@@ -44,3 +44,12 @@ ValueBtn.addEventListener("click", () => {
   valueInput = prompt();
   grid();
 });
+
+let eraserBtn = document.querySelector(".eraser");
+eraserBtn.addEventListener("click", () => {
+  document.querySelectorAll(".box").forEach((e) => {
+    e.addEventListener("mouseover", () => {
+      e.style.background = "none";
+    });
+  });
+});
