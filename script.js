@@ -26,6 +26,15 @@ function getRandomColor() {
   return `rgb(${val1},${val2},${val3})`;
 }
 
+let coloredBtn = document.querySelector(".colored");
+coloredBtn.addEventListener("click", () => {
+  document.querySelectorAll(".box").forEach((e) => {
+    e.addEventListener("mouseover", () => {
+      e.style.background = getRandomColor();
+    });
+  });
+});
+
 let ValueBtn = document.querySelector(".value");
 ValueBtn.addEventListener("click", () => {
   let nodeList = document.querySelectorAll(".row");
