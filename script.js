@@ -54,8 +54,15 @@ ValueBtn.addEventListener("click", () => {
   for (let k = 0; k < valueInput; k++) {
     nodeList[k].remove();
   }
-  valueInput = prompt();
-  grid();
+  let temp=valueInput
+  valueInput = prompt("enter value between 1 to 100");
+  if (valueInput >= 1 && valueInput <= 100) {
+    grid();
+  } else {
+    valueInput=temp;
+    grid()
+    alert("You entered an invalid input. Please try again!!!");
+  }
 });
 
 let eraserflag = false;
