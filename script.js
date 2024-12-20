@@ -9,7 +9,7 @@ function grid() {
     for (let j = 0; j < valueInput; j++) {
       let boxes = document.createElement("div");
       boxes.addEventListener("mouseover", () => {
-        boxes.style.cssText = "background:whitesmoke;";
+        boxes.style.cssText = "background:rgb(131, 129, 129);";
       });
       row.append(boxes);
       boxes.className = "box";
@@ -26,14 +26,28 @@ function getRandomColor() {
   return `rgb(${val1},${val2},${val3})`;
 }
 
+let colorflag = false;
 let coloredBtn = document.querySelector(".colored");
 coloredBtn.addEventListener("click", () => {
-  document.querySelectorAll(".box").forEach((e) => {
-    e.addEventListener("mouseover", () => {
-      e.style.background = getRandomColor();
+  if ((colorflag == false)) {
+    colorflag = true;
+    coloredBtn.style.cssText=" background-color: rgb(156, 156, 156);"
+    document.querySelectorAll(".box").forEach((e) => {
+      e.addEventListener("mouseover", () => {
+        e.style.background = getRandomColor();
+      });
     });
-  });
+  } else {
+    colorflag=false;
+     coloredBtn.style.cssText=" background-color: rgb(69, 243, 243);"
+    document.querySelectorAll(".box").forEach((e) => {
+      e.addEventListener("mouseover", () => {
+        e.style.background = "rgb(131, 129, 129)";
+      });
+    });
+  }
 });
+
 
 let ValueBtn = document.querySelector(".value");
 ValueBtn.addEventListener("click", () => {
