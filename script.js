@@ -29,17 +29,17 @@ function getRandomColor() {
 let colorflag = false;
 let coloredBtn = document.querySelector(".colored");
 coloredBtn.addEventListener("click", () => {
-  if ((colorflag == false)) {
+  if (colorflag == false) {
     colorflag = true;
-    coloredBtn.style.cssText=" background-color: rgb(156, 156, 156);"
+    coloredBtn.style.cssText = " background-color: rgb(156, 156, 156);";
     document.querySelectorAll(".box").forEach((e) => {
       e.addEventListener("mouseover", () => {
         e.style.background = getRandomColor();
       });
     });
   } else {
-    colorflag=false;
-     coloredBtn.style.cssText=" background-color: rgb(69, 243, 243);"
+    colorflag = false;
+    coloredBtn.style.cssText = " background-color: rgb(69, 243, 243);";
     document.querySelectorAll(".box").forEach((e) => {
       e.addEventListener("mouseover", () => {
         e.style.background = "rgb(131, 129, 129)";
@@ -47,7 +47,6 @@ coloredBtn.addEventListener("click", () => {
     });
   }
 });
-
 
 let ValueBtn = document.querySelector(".value");
 ValueBtn.addEventListener("click", () => {
@@ -59,13 +58,27 @@ ValueBtn.addEventListener("click", () => {
   grid();
 });
 
+let eraserflag = false;
 let eraserBtn = document.querySelector(".eraser");
 eraserBtn.addEventListener("click", () => {
-  document.querySelectorAll(".box").forEach((e) => {
-    e.addEventListener("mouseover", () => {
-      e.style.background = "none";
+  coloredBtn.style.cssText = " background-color: rgb(69, 243, 243);";
+  if (eraserflag == false) {
+    eraserflag = true;
+    eraserBtn.style.cssText = " background-color: rgb(156, 156, 156);";
+    document.querySelectorAll(".box").forEach((e) => {
+      e.addEventListener("mouseover", () => {
+        e.style.background = "none";
+      });
     });
-  });
+  } else {
+    eraserflag = false;
+    eraserBtn.style.cssText = " background-color: rgb(69, 243, 243);";
+    document.querySelectorAll(".box").forEach((e) => {
+      e.addEventListener("mouseover", () => {
+        e.style.background = "rgb(131, 129, 129)";
+      });
+    });
+  }
 });
 
 let clearBtn = document.querySelector(".clear");
